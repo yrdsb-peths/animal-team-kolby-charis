@@ -18,7 +18,7 @@ public class Apple extends Actor
     }
     public void removeApple()
     {
-        World world = getWorld();
+        MyWorld world = (MyWorld) getWorld();
         world.removeObject(this);
         world.createApple();
     }
