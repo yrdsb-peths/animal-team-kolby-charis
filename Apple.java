@@ -13,7 +13,13 @@ public class Apple extends Actor
         setLocation(getX(), getY() + 1);
         if(isTouching(Elephant.class))
         {
-            getWorld().removeObject(this);
+            removeApple();
         }
+    }
+    public void removeApple()
+    {
+        World world = getWorld();
+        world.removeObject(this);
+        world.createApple();
     }
 }
