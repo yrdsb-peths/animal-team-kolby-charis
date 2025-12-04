@@ -13,7 +13,9 @@ public class Apple extends Actor
         setLocation(getX(), getY() + 1);
         if(isTouching(Elephant.class))
         {
+            MyWorld world = (MyWorld) getWorld();
             removeApple();
+            world.addScore();
         }
     }
     public void removeApple()
