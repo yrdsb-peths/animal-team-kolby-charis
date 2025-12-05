@@ -10,6 +10,7 @@ import greenfoot.*;
 public class MyWorld extends World {
     int score = 0;
     private Label scoreLabel;
+    private SimpleTimer timer = new SimpleTimer();
 
     public MyWorld() {
         super(600, 400, 1, false);
@@ -41,5 +42,11 @@ public class MyWorld extends World {
     {
         Label label = new Label("Game Over", 80);
         addObject(label, getWidth() / 2, getHeight() / 2);
+    }
+    
+    
+    public SimpleTimer getTimer()
+    {
+        return timer;
     }
 }
