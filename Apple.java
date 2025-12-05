@@ -11,17 +11,23 @@ public class Apple extends Actor
     public void act()
     {
         setLocation(getX(), getY() + 1);
+        MyWorld world = (MyWorld) getWorld();
         if(isTouching(Elephant.class))
         {
-            MyWorld world = (MyWorld) getWorld();
             removeApple();
+            world.createApple();
             world.addScore();
+        }
+        
+        if(getY() > world.getHeight())
+        {
+            removeApple();
+            world.gameOver();
         }
     }
     public void removeApple()
     {
         MyWorld world = (MyWorld) getWorld();
         world.removeObject(this);
-        world.createApple();
     }
 }
