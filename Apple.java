@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Apple extends Actor
 {
+    GreenfootSound sound = new GreenfootSound("elephantcub.mp3");
     public void act()
     {
         MyWorld world = (MyWorld) getWorld();
@@ -16,6 +17,7 @@ public class Apple extends Actor
         {
             world.createApple();
             world.addScore();
+            sound.play();
             removeApple();
             return;
         }
