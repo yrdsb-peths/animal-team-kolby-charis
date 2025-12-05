@@ -10,19 +10,20 @@ public class Apple extends Actor
 {
     public void act()
     {
-        setLocation(getX(), getY() + 1);
         MyWorld world = (MyWorld) getWorld();
-        if(isTouching(Elephant.class))
+        setLocation(getX(), getY() + 1);
+        if (isTouching(Elephant.class))
         {
-            removeApple();
             world.createApple();
             world.addScore();
-        }
-        
-        if(getY() > world.getHeight())
-        {
             removeApple();
+            return;
+        }
+        else if (getY() > world.getHeight())
+        {
             world.gameOver();
+            removeApple();
+            return;
         }
     }
     public void removeApple()
