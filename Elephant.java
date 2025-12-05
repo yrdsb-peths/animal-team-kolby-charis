@@ -45,9 +45,11 @@ public class Elephant extends Actor
             if (direction.equals("right")) {
                 imageIndex = (imageIndex + 1) % idleRightAnim.length;
                 setImage(idleRightAnim[imageIndex]);
+                GreenfootImage.scale(100, 100);
             } else {
                 imageIndex = (imageIndex + 1) % idleLeftAnim.length;
                 setImage(idleLeftAnim[imageIndex]);
+                GreenfootImage.scale(100, 100);
             }
             timer.mark();
         }
