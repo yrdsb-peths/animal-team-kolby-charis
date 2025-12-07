@@ -45,11 +45,9 @@ public class Elephant extends Actor
             if (direction.equals("right")) {
                 imageIndex = (imageIndex + 1) % idleRightAnim.length;
                 setImage(idleRightAnim[imageIndex]);
-                GreenfootImage.scale(100, 100);
             } else {
                 imageIndex = (imageIndex + 1) % idleLeftAnim.length;
                 setImage(idleLeftAnim[imageIndex]);
-                GreenfootImage.scale(100, 100);
             }
             timer.mark();
         }
@@ -60,8 +58,10 @@ public class Elephant extends Actor
         for (int i = 0; i < 8; i++) {
 
             idleRightAnim[i] = new GreenfootImage("elephant_idle/idle" + i + ".png");
+            idleRightAnim[i].scale(100, 100);
             idleLeftAnim[i] = new GreenfootImage("elephant_idle/idle" + i + ".png");
             idleLeftAnim[i].mirrorHorizontally();
+            idleLeftAnim[i].scale(100, 100);
         }
     }
 }

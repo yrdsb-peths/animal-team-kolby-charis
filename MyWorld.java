@@ -18,8 +18,10 @@ public class MyWorld extends World {
         Elephant elephant = new Elephant();
         addObject(elephant, 300, 200);
         createApple();
-        scoreLabel = new Label(0, 80);
+        
+        scoreLabel = new Label(0, 50);
         addObject(scoreLabel, 50, 50);
+        setBackground("background.jpg");
     }
     
     public void createApple()
