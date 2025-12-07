@@ -9,10 +9,12 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Apple extends Actor
 {
     GreenfootSound sound = new GreenfootSound("elephantcub.mp3");
+    int speed = 1;
+    
     public void act()
     {
         MyWorld world = (MyWorld) getWorld();
-        setLocation(getX(), getY() + 1);
+        setLocation(getX(), getY() + speed);
         if (isTouching(Elephant.class))
         {
             world.createApple();
@@ -34,4 +36,8 @@ public class Apple extends Actor
         world.removeObject(this);
     }
     
+    public void setSpeed(int spd)
+    {
+        speed = spd;
+    }
 }

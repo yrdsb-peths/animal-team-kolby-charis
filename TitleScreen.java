@@ -31,6 +31,12 @@ public class TitleScreen extends World
         
         Label instructionLabel = new Label("Press Space to Start", 40);
         addObject(instructionLabel, getWidth()/2, getHeight()/2 + 60);
+        
+        Label arrowLabel = new Label("Use \u2190 and \u2192 to Move", 40);
+        addObject(arrowLabel, getWidth()/2, getHeight()/2 + 110);
+        
+        Elephant elephant = new Elephant();
+        addObject(elephant, getWidth()/2, 100);
     }
     
     /**

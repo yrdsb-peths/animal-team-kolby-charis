@@ -9,6 +9,7 @@ import greenfoot.*;
 
 public class MyWorld extends World {
     int score = 0;
+    int level = 1;
     private Label scoreLabel;
     private SimpleTimer timer = new SimpleTimer();
 
@@ -24,6 +25,7 @@ public class MyWorld extends World {
     public void createApple()
     {
         Apple apple = new Apple();
+        apple.setSpeed(level);
         addObject(apple, randomX(), 0);
     }
 
@@ -36,6 +38,10 @@ public class MyWorld extends World {
     {
         score++;
         scoreLabel.setValue(score);
+        if(score % 5 == 0)
+        {
+            level++;
+        }
     }
 
     public void gameOver()
