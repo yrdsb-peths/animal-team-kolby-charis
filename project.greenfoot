@@ -1,0 +1,5 @@
+title=animal-team-kolby-charis
+simulation.speed=50
+world.class=TitleScreen
+project.charset=UTF-8
+version=3.0.0
