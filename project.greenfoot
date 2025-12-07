@@ -1,6 +1,5 @@
 #Greenfoot project file
 class.Apple.image=apple.png
-class.MyWorld.image=background.jpg
 class.TitleScreen.image=background.jpg
 dependency1.from=MyWorld
 dependency1.to=Label
